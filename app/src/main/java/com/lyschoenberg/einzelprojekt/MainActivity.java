@@ -24,4 +24,10 @@ public class MainActivity extends AppCompatActivity {
         TcpClientThread thread = new TcpClientThread(answerTextView, matrikelnummer);
         thread.start();
     }
+
+    public void calculatePrimzahl(View view) {
+        String matrikelnummer = editTextNumber.getText().toString();
+        PrimzahlThread thread = new PrimzahlThread(answerTextView, matrikelnummer);
+        thread.start();
+    }
 }
